@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TriviaActivity">
+
+    <ImageButton
+        android:id="@+id/backbutton"
+        android:layout_width="45dp"
+        android:layout_height="38dp"
+        android:background="@drawable/rounded_light_orange_background"
+        android:src="@drawable/baseline_keyboard_backspace_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.025"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.009" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat_bold"
+        android:text="Trivia"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.021" />
+
+    <TextView
+        android:id="@+id/question_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat_bold"
+        android:text="What year was the Eiffel Tower completed?"
+        android:textColor="@color/black"
+        android:textSize="24dp"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.192" />
+
+    <RadioGroup
+        android:id="@+id/options_group"
+        android:layout_width="match_parent"
+        android:layout_height="410dp"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/question_text"
+        app:layout_constraintBottom_toTopOf="@id/submit_button"
+        app:layout_constraintVertical_bias="0.3">
+
+        <View
+            android:layout_width="351dp"
+            android:layout_height="20dp"
+            android:layout_marginBottom="-10dp"
+            android:layout_marginStart="14dp"
+            android:background="@drawable/rounded_yellow_background"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.52"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <RadioButton
+            android:id="@+id/option1_button"
+            android:layout_width="367dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="7dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/rounded_button_with_border"
+            android:drawableLeft="@drawable/baseline_looks_one_24"
+            android:drawablePadding="-65dp"
+            android:fontFamily="@font/montserrat_semibold"
+            android:gravity="center"
+            android:paddingStart="10dp"
+            android:text="Option 1"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.545"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <View
+            android:layout_width="351dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="14dp"
+            android:layout_marginBottom="-10dp"
+            android:background="@drawable/rounded_voilet_background"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.52"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <RadioButton
+            android:id="@+id/option2_button"
+            android:layout_width="367dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="7dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/rounded_button_with_border"
+            android:drawableLeft="@drawable/baseline_looks_two_24"
+            android:drawablePadding="-65dp"
+            android:fontFamily="@font/montserrat_semibold"
+            android:gravity="center"
+            android:paddingStart="10dp"
+            android:text="Option 2"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.545"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+
+        <View
+            android:layout_width="351dp"
+            android:layout_height="20dp"
+            android:layout_marginBottom="-10dp"
+            android:layout_marginStart="14dp"
+            android:background="@drawable/rounded_lightblue_background"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.52"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+            <RadioButton
+                android:id="@+id/option3_button"
+                android:layout_width="367dp"
+                android:layout_height="50dp"
+                android:background="@drawable/rounded_button_with_border"
+                android:drawableLeft="@drawable/baseline_looks_3_24"
+                android:drawablePadding="-65dp"
+                android:fontFamily="@font/montserrat_semibold"
+                android:gravity="center"
+                android:paddingStart="10dp"
+                android:text="Option 3"
+                android:textColor="#000000"
+                android:layout_marginStart="7dp"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.545"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0"
+                android:layout_marginBottom="20dp"/>
+
+
+
+        <View
+            android:layout_width="351dp"
+            android:layout_height="20dp"
+            android:layout_marginBottom="-10dp"
+            android:layout_marginStart="14dp"
+            android:background="@drawable/rounded_orange_background"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.52"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+            <RadioButton
+                android:id="@+id/option4_button"
+                android:layout_width="367dp"
+                android:layout_height="50dp"
+                android:background="@drawable/rounded_button_with_border"
+                android:drawableLeft="@drawable/baseline_looks_4_24"
+                android:drawablePadding="-65dp"
+                android:fontFamily="@font/montserrat_semibold"
+                android:gravity="center"
+                android:paddingStart="10dp"
+                android:text="Option 4"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                android:layout_marginStart="7dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.545"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
+
+    </RadioGroup>
+
+
+    <Button
+        android:id="@+id/submit_button"
+        android:layout_width="379dp"
+        android:layout_height="64dp"
+        android:background="@drawable/rounded_button_with_border"
+        android:drawableLeft="@drawable/baseline_next_plan_24"
+        android:drawablePadding="-30dp"
+        android:fontFamily="@font/montserrat_bold"
+        android:paddingStart="10dp"
+        android:text="Submit"
+        android:textColor="#000000"
+        android:textSize="26sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.952" />
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="365dp"
+        android:layout_height="25dp"
+        android:background="@drawable/rounded_teal_background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.968" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

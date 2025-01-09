@@ -1,0 +1,15 @@
+<resources>
+    <style name="AppBottomSheetDialogTheme" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/CustomBottomSheetStyle</item>
+    </style>
+
+    <style name="CustomBottomSheetStyle" parent="Widget.Design.BottomSheet.Modal">
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearance.BottomSheet</item>
+        <item name="android:background">@drawable/rounded_top_background</item> <!-- Apply the rounded shape here -->
+    </style>
+
+    <style name="ShapeAppearance.BottomSheet" parent="ShapeAppearance.MaterialComponents.MediumComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">16dp</item> <!-- Set the desired corner radius -->
+    </style>
+</resources>

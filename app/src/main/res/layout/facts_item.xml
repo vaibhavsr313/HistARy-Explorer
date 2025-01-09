@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="8dp"
+    android:orientation="horizontal"
+    android:background="@color/black"
+    android:paddingBottom="10dp">
+
+    <TextView
+        android:id="@+id/fact_index"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:paddingEnd="8dp"
+        android:text="1."
+        android:textColor="@android:color/white"
+        android:fontFamily="@font/montserrat_medium"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/fact_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/white"
+        android:paddingEnd="8dp"
+        android:fontFamily="@font/montserrat_medium"
+        android:text="Fact goes here" />
+</LinearLayout>

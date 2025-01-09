@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:paddingBottom="20dp"
+    android:paddingTop="20dp"
+    android:paddingLeft="5dp"
+    android:paddingRight="5dp"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="15dp"
+    android:layout_marginEnd="15dp"
+    android:background="@color/black">
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="105dp"
+        android:layout_height="77dp"
+        android:layout_marginStart="125dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="132dp"
+        android:layout_marginBottom="5dp"
+        app:srcCompat="@drawable/dialogcustomlocation" />
+
+    <TextView
+        android:id="@+id/dialog_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:layout_marginStart="65dp"
+        android:fontFamily="@font/montserrat_bold"
+        android:text="Enable Location"
+        android:textColor="#fff"
+        android:textSize="28dp"
+        />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="14dp"
+        android:layout_marginStart="5dp"
+        android:fontFamily="@font/montserrat"
+        android:text="Your location is currently turned off. Do you want to turn it on?"
+        android:textColor="#C8FFFFFF"
+        android:textSize="16dp"
+        android:paddingTop="5dp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp">
+
+        <Button
+            android:id="@+id/dialog_no_thanks"
+            android:layout_width="147dp"
+            android:layout_height="48dp"
+            android:background="@drawable/roundbtnred"
+            android:fontFamily="@font/montserrat_semibold"
+            android:text="No, Thanks"
+            android:textColor="#000"
+            android:layout_marginStart="15dp"/>
+
+        <Button
+            android:id="@+id/dialog_turn_on"
+            android:layout_width="144dp"
+            android:layout_height="48dp"
+            android:background="@drawable/rounded_button_turnon"
+            android:fontFamily="@font/montserrat_semibold"
+            android:text="Turn On"
+            android:textColor="#000"
+            android:layout_marginStart="30dp"/>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipChildren="false"
+    android:clipToPadding="false">
+
+    <!-- KonfettiView placed in the background -->
+    <nl.dionsegijn.konfetti.xml.KonfettiView
+        android:id="@+id/konfettiView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="top"/>
+
+    <!-- Existing NestedScrollView -->
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/rounded_top_black_background"
+        android:fillViewport="true"
+        android:clipToOutline="true"
+        android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Drag handle -->
+        <View
+            android:layout_width="100dp"
+            android:layout_height="5dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="12dp"
+            android:background="#fff" />
+
+        <!-- Place Name at Center -->
+        <TextView
+            android:id="@+id/place_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:fontFamily="@font/montserrat_bold"
+            android:textColor="#fff"
+            android:textSize="24sp"
+            android:gravity="center"
+            android:layout_marginBottom="12dp"
+            android:text="Place Name" />
+
+        <!-- Slideable Images -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginBottom="16dp">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/richwhite"
+                android:padding="5dp">
+                <!-- Image Slider -->
+                <androidx.viewpager2.widget.ViewPager2
+                    android:id="@+id/image_slider"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </FrameLayout>
+
+            <!-- Indicators -->
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/image_slider_indicator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|center_horizontal"
+                android:layout_marginBottom="16dp"
+                app:tabIndicatorColor="@color/white"
+                app:tabSelectedTextColor="@color/white"
+                app:tabTextColor="@color/gray"
+                app:tabIndicatorHeight="4dp" />
+        </FrameLayout>
+
+        <!-- Place Info Title -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:paddingRight="15dp"
+                android:src="@drawable/baseline_info_24" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Place Info"
+                android:fontFamily="@font/montserrat_semibold"
+                android:textColor="#ffffff"
+                android:textStyle="bold"
+                android:gravity="left"
+                android:layout_marginBottom="8dp"
+                android:textSize="22sp" />
+
+        </LinearLayout>
+
+        <!-- Place Info Description -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="12dp"
+            android:background="#fff" />
+
+        <TextView
+            android:id="@+id/place_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Info text of 75 words here"
+            android:textColor="#eeeeee"
+            android:layout_marginBottom="20dp"
+            android:fontFamily="@font/montserrat_medium"
+            android:gravity="left" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="42dp"
+                android:layout_height="28dp"
+                android:paddingRight="7dp"
+                android:src="@drawable/history_text_image" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="History"
+                android:textColor="#ffffff"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp"
+                android:textSize="22sp"
+                android:fontFamily="@font/montserrat_semibold"
+                android:gravity="left" />
+
+
+
+
+
+        </LinearLayout>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="12dp"
+            android:background="#fff" />
+
+        <TextView
+            android:id="@+id/history_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="History text of 75 words here"
+            android:textColor="#eeeeee"
+            android:fontFamily="@font/montserrat_medium"
+            android:layout_marginBottom="20dp"
+            android:gravity="left" />
+
+        <!-- Facts Title -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="42dp"
+                android:layout_height="28dp"
+                android:paddingRight="7dp"
+                android:src="@drawable/facts_text_img" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Facts"
+                android:textColor="#ffffff"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp"
+                android:textSize="22sp"
+                android:fontFamily="@font/montserrat_semibold"
+                android:gravity="left" />
+
+        </LinearLayout>
+
+        <!-- Facts Recycler -->
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="12dp"
+            android:background="#fff" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/facts_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-2dp"
+            android:layout_marginBottom="5dp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="12dp"
+            android:background="#fff" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/trivia_button"
+                android:layout_width="163dp"
+                android:layout_height="match_parent"
+                android:drawablePadding="-15dp"
+                android:layout_marginRight="16dp"
+                android:background="@drawable/btn_bg"
+                android:elevation="8dp"
+                android:fontFamily="@font/montserrat_bold"
+                android:padding="12dp"
+                android:text="Trivia"
+                android:textColor="#ffffff"
+                android:drawableLeft="@drawable/trivia_icon"/>
+
+            <Button
+                android:id="@+id/threeD_button"
+                android:layout_width="162dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="16dp"
+                android:background="@drawable/btn_bg"
+                android:fontFamily="@font/montserrat_bold"
+                android:padding="12dp"
+                android:text="3D Zone"
+                android:drawableLeft="@drawable/ar"
+                android:textColor="#ffffff" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="12dp"
+            android:background="#fff" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ToggleButton
+                android:id="@+id/like_button"
+                android:layout_width="163dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="16dp"
+                android:background="@drawable/white_bg"
+                android:elevation="8dp"
+                android:fontFamily="@font/montserrat_bold"
+                android:padding="12dp"
+                android:textColor="#000"
+                android:drawablePadding="-15dp"
+                android:drawableLeft="@drawable/like_button_icon_selector"
+                android:textOff="Like"
+                android:textOn="Liked"
+                android:checked="false" />
+
+            <ToggleButton
+                android:id="@+id/visited_button"
+                android:layout_width="163dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="16dp"
+                android:background="@drawable/white_bg"
+                android:elevation="8dp"
+                android:fontFamily="@font/montserrat_bold"
+                android:padding="12dp"
+                android:textColor="#000"
+                android:drawablePadding="-15dp"
+                android:drawableLeft="@drawable/visited_button_icon_selector"
+                android:textOff="Visit"
+                android:textOn="Visited"
+                android:checked="false" />
+
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/navigate_here"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="20dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="0dp"
+            android:background="@drawable/rounded_button_light_green"
+            android:fontFamily="@font/montserrat_bold"
+            android:padding="12dp"
+            android:text="Navigate Here"
+            android:textColor="#ffffff"
+            android:textSize="22dp" />
+
+    </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+</FrameLayout>

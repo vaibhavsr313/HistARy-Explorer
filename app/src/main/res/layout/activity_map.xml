@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MapActivity"
+    android:background="@color/richwhite">
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/mylocationfloatingbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#000000"
+        android:clickable="true"
+        android:elevation="200dp"
+        app:backgroundTint="@color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/bottomnavinmap"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.93"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.85"
+        app:srcCompat="@drawable/baseline_my_location_24" />
+
+    <com.ola.mapsdk.view.OlaMapView
+        android:id="@+id/mapView"
+        android:layout_width="411dp"
+        android:layout_height="762dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.095" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomnavinmap"
+        android:layout_width="416dp"
+        android:layout_height="76dp"
+        android:background="@color/black"
+        app:itemIconSize="26dp"
+        app:itemIconTint="@color/richwhite"
+        app:itemTextColor="@color/richwhite"
+        app:labelVisibilityMode="unlabeled"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/tabs" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
